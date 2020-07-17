@@ -2988,6 +2988,13 @@
         position: absolute;
         border: 0 none;
     }
+
+    #ajax-content .user.registration,
+    #ajax-content .user.actioncode {
+        border-radius: 7px;
+        overflow: hidden;
+        margin: -9px -10px -24px -10px;
+    }
 }
 
 
@@ -3190,67 +3197,63 @@
         display: block;
         padding-bottom: 29%;
     }
+
+    a.myf_button_add:link, 
+    a.myf_button_add:active, 
+    a.myf_button_add:visited {
+        color: #fff;
+        display: block;
+        float: left;
+        margin-bottom: 1.5em;
+        text-decoration:none;
+    }	
+
+    a.myf_button_add:hover {
+        background-color:#36464c;
+    }
+
+    .community-content--full-size, #map_modal .community-content--full-size {
+        overflow-y: auto;
+    }
+
+    .community-content--full-size {
+        background-color: #f7f6f6;
+        border-radius: 10px;
+        padding: 1em 1em 2em 1em;
+        position: relative;
+        font-family: "Roboto", Ubuntu, Arial, Verdana, sans-serif;
+        color: #36464c;
+        max-height: 90vh;
+    }
+    .community-content--full-size #mu_item__close,
+    .community-content--full-size #cm_item__close {
+        border-radius: 100%;
+        background-color: #fff;
+        left: auto;
+        right: 18px;
+    }
+
+    .community-content--full-size #mu_item__close,
+    .community-content--full-size #mu_item__close,
+    .community-content--full-size #cm_map__close, 
+    .community-content--full-size #cm_item__close {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        z-index: 100;
+    }
+    #myf_modal .form-group::after {
+        content: '';
+        clear:both;
+        width:100%;
+        display:block;
+    }
 }
 
 
 
 
-#modal a.myf_button_add:link, 
-#modal a.myf_button_add:active, 
-#modal a.myf_button_add:visited {
-    color: #fff;
-    display: block;
-    float: left;
-    margin-bottom: 1.5em;
-    text-decoration:none;
-}	
 
-#modal a.myf_button_add:hover {
-    background-color:#36464c;
-}
-
-#modal .community-content--full-size, #map_modal .community-content--full-size {
-    overflow-y: auto;
-}
-
-.community-content--full-size {
-    background-color: #f7f6f6;
-    border-radius: 10px;
-    padding: 1em 1em 2em 1em;
-    position: relative;
-    font-family: "Roboto", Ubuntu, Arial, Verdana, sans-serif;
-    color: #36464c;
-    max-height: 90vh;
-}
-.community-content--full-size #mu_item__close,
-.community-content--full-size #cm_item__close {
-    border-radius: 100%;
-    background-color: #fff;
-    left: auto;
-    right: 18px;
-}
-
-.community-content--full-size #mu_item__close,
-.community-content--full-size #mu_item__close,
-.community-content--full-size #cm_map__close, 
-.community-content--full-size #cm_item__close {
-    position: absolute;
-    top: 1em;
-    left: 1em;
-    z-index: 100;
-}
-#myf_modal .form-group::after {
-    content: '';
-    clear:both;
-    width:100%;
-    display:block;
-}
-#ajax-content .user.registration,
-#ajax-content .user.actioncode {
-    border-radius: 7px;
-    overflow: hidden;
-    margin: -9px -10px -24px -10px;
-}
 
 #myf-login-panel {
     background-image: url('https://www.myfavorito.com/en/app/media/resource/_ju9szjfw.deliver?layout=og.png');
