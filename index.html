@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html><head></head><body>
+<html><head>
+	<meta charset="UTF-8">
+</head><body>
 
    
  
@@ -10,12 +12,24 @@
 <div id="external-content" data-external-url="https://www.myfavorito.com/en?t=/sportsclub_widget/widget&cid=1530531138782" style=""></div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
-<script src="https://www.myfavorito.com/?t=/sportsclub_widget/lib/widget.js"></script>
-
-<script>
+<!-- <script src="https://www.myfavorito.com/?t=/sportsclub_widget/lib/widget.js"></script> -->
+<script src="./app/widget.js"></script>
+<!-- <script src="./dist/main.js"></script>-->
+<script type="text/javascript">
 $(document).ready(function() {
-	var content = $('#external-content');
-	content.load(content.attr('data-external-url'));
+	var myFavoritoContent = $('#external-content');
+	$.ajax({
+		url:myFavoritoContent.attr('data-external-url'),
+		method: 'POST',
+		crossDomain: true,
+		contentType: "text/plain",
+		xhrFields: {
+      		withCredentials: true
+   		}
+	}).done(function(data,result,xhr){
+		myFavoritoContent.html(data);
+	});
+	//myFavoritoContent.load(content.attr('data-external-url'));
 });
 </script>
 

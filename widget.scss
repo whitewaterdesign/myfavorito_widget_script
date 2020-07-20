@@ -4020,7 +4020,11 @@
         border-color: #d6e9c6;
         color: #3c763d;
     }
-
+    #main-body h1 {
+        font-size: 2.07em;
+        font-weight: 400;
+    }
+    
     #myf-login-form .myf-login-fields input, #myf-login-form .myf-login-fields select {
         margin-bottom: 15px;
         outline: 0 none;
@@ -4182,13 +4186,47 @@
 
         h1 {
             margin-top:20px;
-            margin-bottom:10px;
+			margin-bottom:10px;
+			font-weight:500;
+			font-size:36px;
+    //        text-transform: uppercase;
         }
     }
 
     &.active {
         display:block;
     }
+    #actioncode, #myf-login-form .myf-login-fields input {
+        width: 100%;
+        line-height: 2em;
+        padding: 4px 18px;
+        border: 0 none;
+        box-shadow: none;
+        font-family: 'Roboto', Ubuntu, Arial, Verdana, sans-serif;
+    }
+
+    #myf-broadcast-wrap .form-control, 
+    #myf-login-wrap .form-control {
+        font-size: 0.93em;
+        padding: 7px 103px 7px 18px;
+        border: 0 none;
+        font-family: 'Roboto', Ubuntu, Arial, Verdana, sans-serif;
+        border-radius: 0;
+    }
+    .form-group {
+        margin-bottom: 15px;
+
+        &::after {
+            clear: both;
+            content: " ";
+            display: table;
+        }
+
+        label {
+            font-weight:700;
+        }
+    }
+    
 }
 
 // Section 3 end: #myf_modal
