@@ -207,7 +207,7 @@ const get_modal_widget = function(url) {
     $.post({
         url:url,
         crossDomain: true,
-		contentType: "text/plain",
+		//contentType: "text/plain",
 		xhrFields: {
       		withCredentials: true
    		},
@@ -308,7 +308,6 @@ const webclient_modal_event_click_a = function(e) {
             url: viewport_url,
             method: 'POST',
             crossDomain: true,
-            contentType: "text/plain",
             xhrFields: {
                 withCredentials: true
             },
@@ -336,7 +335,6 @@ const webclient_modal_event_form = function(e) {
     var opt = {
         target : '#ajax-content',
         crossDomain: true,
-		contentType: "text/plain",
 		xhrFields: {
       		withCredentials: true
    		},
