@@ -64,7 +64,14 @@
         border-collapse: collapse;
         border-spacing: 0;
     }
-
+	a {
+		&:link,
+		&:visited,
+		&:active {
+			text-decoration:none;
+			color:#23527c;
+		}
+	}
     line-height: 1.42857143;
     font-family: 'Roboto', sans-serif;
 	  
@@ -2998,7 +3005,6 @@
 
     ul#myf_store_switch.myf_switch_menu #myf-user {
         float:left;	
-        margin-left:1em;
         font-size:1.3em;
     }
 
