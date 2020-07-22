@@ -58,14 +58,14 @@ const muurigrid_modal = function(data,template) {
         business_hours = business_hours + '<div class="mu_item__businesshours hide"><strong>$1${Business hours}$0</strong><br />';
 
         const daysOfWeek = {
-            1: 'Sunday',
-            2: 'Monday',
-            3: 'Tuesday',
-            4: 'Wednesday',
-            5: 'Thursday',
-            6: 'Friday',
-            7: 'Saturday',
-            h: 'Holiday' 
+            1: '$1${Sunday}',
+            2: '${Monday}',
+            3: '${Tuesday}',
+            4: '${Wednesday}',
+            5: '${Thursday}',
+            6: '${Friday}',
+            7: '${Saturday}',
+            h: '${Holiday}$0' 
         };
         
         // get data for each day

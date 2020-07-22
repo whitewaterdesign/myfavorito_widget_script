@@ -2799,7 +2799,18 @@
 		  }
 		}
       }
-      
+	  $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+
+	  @each $breakpoint in map-keys($grid-breakpoints) {
+		@include media-breakpoint-up($breakpoint) {
+		  $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	  
+		  @each $value in $displays {
+			.d#{$infix}-#{$value} { display: $value !important; }
+		  }
+		}
+	  }
+
       a.myf_button_add {
         background-color: #ced619;
         padding: 0.4em 2em;
@@ -3002,10 +3013,16 @@
         border:0 none;
         background-color:transparent;
     }
-
-    ul#myf_store_switch.myf_switch_menu #myf-user {
-        float:left;	
+	ul#myf_store_switch.myf_switch_menu #myf-user {
+        float:right;	
+	}
+	ul#myf_store_switch.myf_switch_menu #myf-user,
+	ul#myf_store_switch.myf_switch_menu #myf-user-medium {
         font-size:1.3em;
+	}
+	
+	ul#myf_store_switch.myf_switch_menu #myf-user-medium {
+        float:right;	
     }
 
     ul.myf_sportwidget_nav > li:first-child a {
@@ -3023,24 +3040,29 @@
     color:#36464c;
     }
 
-    @media (min-width: 617px) {
+    /*@media (min-width: 617px) {
         ul.myf_sportwidget_nav {
             background-color: transparent;
-            margin: 0 0 2em;
-        }
-        ul.myf_sportwidget_nav li {
-            float:left;
-            margin:0px 5px 0px 0px;
-            padding:0;
-        }
+			margin: 0 0 2em;
+			
+			li {
+				
+				float:left;
+				margin:0px 5px 0px 0px;
+				padding:0;
 
-        ul.myf_sportwidget_nav li a {
-            padding:5px 1em;
-        }
+				a {
+					padding:5px 1em;
+				}
 
+				&.my_sponsor {
+					margin-left:0;
+					margin-top:0.75rem;
+				}
+			}
 
-    
-    }
+        }    
+    }*/
 
 
     .marketplace-item {
@@ -3656,6 +3678,27 @@
 
     }
     @media (min-width: 768px) {
+		ul.myf_sportwidget_nav {
+            background-color: transparent;
+			margin: 0 0 2em;
+			
+			li {
+				
+				float:left;
+				//margin:0px 5px 0px 0px;
+				padding:0;
+
+				a {
+				//	padding:5px 1em;
+				}
+
+				&.my_sponsor {
+					margin-left:0;
+					margin-top:0.75rem;
+				}
+			}
+
+        }  
         ul#myf_store_switch.myf_switch_menu {
             max-height:58px;
             margin-top: 0;
@@ -3708,7 +3751,8 @@
             border-bottom-color:#cbcbcb;
         }
         
-        ul#myf_store_switch.myf_switch_menu #myf-user {
+		ul#myf_store_switch.myf_switch_menu #myf-user,
+		ul#myf_store_switch.myf_switch_menu #myf-user-medium {
             float:right;	
         }
     }
@@ -4231,7 +4275,13 @@
         label {
             font-weight:700;
         }
-    }
+	}
+	
+	#action_code_my_community {
+		img.img-flag {
+			vertical-align: middle;
+		}
+	}
     
 }
 
