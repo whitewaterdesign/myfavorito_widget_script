@@ -342,18 +342,26 @@ const webclient_modal_event_form = function(e) {
     
     var $input = $(e.target);
     var $form = $input.closest('form');
-    
+    var $submitter = $(e.submitter);
+
     if ( $form.hasClass('js-off') || $form.closest('.js-off').get(0) ) return true;
     
     e.preventDefault();
     
+    //console.log(e.submitter.name);
+    //console.log(submitter);
+    //console.log($submitter);
+
     var opt = {
         target : '#ajax-content',
         crossDomain: true,
 		xhrFields: {
       		withCredentials: true
    		},
-        data : {'X-Requested-With':'AjaxFormSubmit','modal':'1','submit':'1'},
+        data : {
+                'X-Requested-With':'AjaxFormSubmit',
+                'modal':'1'
+        },
         beforeSubmit : function(){
             $('input, select', $form).prop('disabled',true);
             $form.fadeTo('fast', 0.5);
@@ -372,6 +380,9 @@ const webclient_modal_event_form = function(e) {
         }
     };
     opt.data[$input.attr('name')] = $input.attr('value') || '';
+    opt.data[$submitter.attr('name')] = '1';
     
+    console.log(opt.data);
+
     $form.ajaxSubmit(opt);
 };
