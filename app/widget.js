@@ -1,3 +1,5 @@
+var chris_debug;
+
 $(document).ready(function() {
     //var content = $('#external-content');
     //content.load(content.attr('data-external-url'));  
@@ -229,6 +231,10 @@ const get_modal_widget = function(url) {
             </div>
             
             */
+            // fix any relative url issues - set absolute url
+            data = data.replace('src="/','src="https://www.myfavorito.com/');
+            data = data.replace('href="/','href="https://www.myfavorito.com/');
+            data = data.replace('action="/','action="https://www.myfavorito.com/');
             // initialise main content div
             let community_content = document.createElement('div');
             community_content.classList.add('community-content--full-size');
@@ -316,6 +322,9 @@ const webclient_modal_event_click_a = function(e) {
                 ajax_content.fadeTo('fast', 0.5);
             }
         }).done(function(res){
+            res = res.replace('src="/','src="https://www.myfavorito.com/');
+            res = res.replace('href="/','href="https://www.myfavorito.com/');
+            res = res.replace('action="/','action="https://www.myfavorito.com/');
             ajax_content.html(res);
         }).always(function(){
             ajax_content.fadeTo('fast', 1);
@@ -344,17 +353,17 @@ const webclient_modal_event_form = function(e) {
       		withCredentials: true
    		},
         data : {'X-Requested-With':'AjaxFormSubmit','modal':'1','submit':'1'},
-        beforeSend: function(xhr, options) {
-            options.url = 'https://www.myfavorito.com' + options.url;
-        }
         beforeSubmit : function(){
             $('input, select', $form).prop('disabled',true);
             $form.fadeTo('fast', 0.5);
         },
-        success : function(){
+        success : function(res){
+            res = res.replace('src="/','src="https://www.myfavorito.com/');
+            res = res.replace('href="/','href="https://www.myfavorito.com/');
+            res = res.replace('action="/','action="https://www.myfavorito.com/');
+
             $form.fadeTo('fast', 1);
             $('input:submit, select', $form).prop('disabled',false);
-            console.log('test');
         },
         error : function(){
             $form.fadeTo('fast', 1);

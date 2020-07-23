@@ -3526,7 +3526,15 @@
     }
     .myf_transactions,
     .myf_bestmembers {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		
+		.myf_caution {
+			@media (min-width:768px) {
+				margin-top:1rem;
+			}
+			@media (min-width: 1200px) {
+				margin-top:0rem;
+			}
+		}
     }
     .webclient_white_card {
         background-color: #fff;
