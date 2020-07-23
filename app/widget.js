@@ -312,8 +312,8 @@ const webclient_modal_event_click_a = function(e) {
                 withCredentials: true
             },
             data: "modal=1",
-            beforeSend: function(){
-                ajax_content.fadeTo('fast', 0.5);
+            beforeSend: function(xhr, options) {
+                console.log(options);
             }
         }).done(function(res){
             ajax_content.html(res);
@@ -322,7 +322,12 @@ const webclient_modal_event_click_a = function(e) {
         });
     } else {console.log('undefined');}
 };
-
+/*var baseUrl = 'http://my.hardcoded.url/';
+$.ajaxSetup({
+    beforeSend: function(xhr, options) {
+        options.url = baseUrl + options.url;
+    }
+})*/
 const webclient_modal_event_form = function(e) {
     
     var $input = $(e.target);
@@ -331,7 +336,7 @@ const webclient_modal_event_form = function(e) {
     if ( $form.hasClass('js-off') || $form.closest('.js-off').get(0) ) return true;
     
     e.preventDefault();
-    
+
     var opt = {
         target : '#ajax-content',
         crossDomain: true,
@@ -339,6 +344,9 @@ const webclient_modal_event_form = function(e) {
       		withCredentials: true
    		},
         data : {'X-Requested-With':'AjaxFormSubmit','modal':'1','submit':'1'},
+        beforeSend: function(xhr, options) {
+           console.log(options);
+        },
         beforeSubmit : function(){
             $('input, select', $form).prop('disabled',true);
             $form.fadeTo('fast', 0.5);

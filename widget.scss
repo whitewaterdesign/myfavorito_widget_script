@@ -4047,7 +4047,41 @@
     }
 
     #myf-login-form {
-        color: #fff;
+		color: #fff;
+		
+		.custom-selector {
+			select {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				-ms-word-break: normal;
+				word-break: normal;
+				padding-left: 13px;
+				padding-right: 18px;
+				width:100%;
+			}
+
+			&::after {
+				content: "\e114";
+				font: normal 400 normal 17px/1 "Glyphicons Halflings";
+				color: #36464c;
+				right: 25px;
+				top: 7px;
+				position: absolute;
+				pointer-events: none;
+			}
+
+		}
+
+
+		.myf-login-fields .captcha {
+			font-size: 1.3em;
+
+			br {
+				display:none;
+			}
+		}
+		
     }
 
     #myf-login-form .myf-login-fields input {
@@ -4078,7 +4112,11 @@
     #myf-login-form .myf-login-fields input, #myf-login-form .myf-login-fields select {
         margin-bottom: 15px;
         outline: 0 none;
-    }
+	}
+	.myf-login-fields select {
+		max-width:100%;
+	}
+	
 
     #myf-login-form .myf-login-fields input, #main-body.marketplace .myf-login-fields input {
         border-radius: 0;
@@ -4289,7 +4327,9 @@
 
 
 .container #external-content .container {
-    width:auto;
+	width:auto;
+	max-width:100%;
+	margin:0;
 
     @media (min-width:768px) {
         width:auto;
