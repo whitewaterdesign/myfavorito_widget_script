@@ -231,10 +231,11 @@ const get_modal_widget = function(url) {
             </div>
             
             */
-            // fix any relative url issues - set absolute url
-            data = data.replace('src="/','src="https://www.myfavorito.com/');
-            data = data.replace('href="/','href="https://www.myfavorito.com/');
-            data = data.replace('action="/','action="https://www.myfavorito.com/');
+            // fix any relative url issues - create absolute url
+            data = data.replace(/\ssrc=\"\//g,' src="https://www.myfavorito.com/');
+            data = data.replace(/\shref=\"\//g,' href="https://www.myfavorito.com/');
+            data = data.replace(/\saction=\"\//g,' action="https://www.myfavorito.com/');
+
             // initialise main content div
             let community_content = document.createElement('div');
             community_content.classList.add('community-content--full-size');
@@ -321,11 +322,11 @@ const webclient_modal_event_click_a = function(e) {
             beforeSend: function(){
                 ajax_content.fadeTo('fast', 0.5);
             }
-        }).done(function(res){
-            res = res.replace('src="/','src="https://www.myfavorito.com/');
-            res = res.replace('href="/','href="https://www.myfavorito.com/');
-            res = res.replace('action="/','action="https://www.myfavorito.com/');
-            ajax_content.html(res);
+        }).done(function(data){
+            data = data.replace(/\ssrc=\"\//g,' src="https://www.myfavorito.com/');
+            data = data.replace(/\shref=\"\//g,' href="https://www.myfavorito.com/');
+            data = data.replace(/\saction=\"\//g,' action="https://www.myfavorito.com/');
+            ajax_content.html(data);
         }).always(function(){
             ajax_content.fadeTo('fast', 1);
         });
@@ -357,10 +358,10 @@ const webclient_modal_event_form = function(e) {
             $('input, select', $form).prop('disabled',true);
             $form.fadeTo('fast', 0.5);
         },
-        success : function(res){
-            res = res.replace('src="/','src="https://www.myfavorito.com/');
-            res = res.replace('href="/','href="https://www.myfavorito.com/');
-            res = res.replace('action="/','action="https://www.myfavorito.com/');
+        success : function(data){
+            data = data.replace(/\ssrc=\"\//g,' src="https://www.myfavorito.com/');
+            data = data.replace(/\shref=\"\//g,' href="https://www.myfavorito.com/');
+            data = data.replace(/\saction=\"\//g,' action="https://www.myfavorito.com/');
 
             $form.fadeTo('fast', 1);
             $('input:submit, select', $form).prop('disabled',false);
