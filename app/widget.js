@@ -367,10 +367,11 @@ const webclient_modal_event_form = function(e) {
             $form.fadeTo('fast', 0.5);
         },
         success : function(data){
+            console.log(data);
             data = data.replace(/\ssrc=\"\//g,' src="https://www.myfavorito.com/');
             data = data.replace(/\shref=\"\//g,' href="https://www.myfavorito.com/');
             data = data.replace(/\saction=\"\//g,' action="https://www.myfavorito.com/');
-
+            console.log(data);
             $form.fadeTo('fast', 1);
             $('input:submit, select', $form).prop('disabled',false);
         },
