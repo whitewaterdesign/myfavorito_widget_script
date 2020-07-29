@@ -65,6 +65,8 @@
         border-spacing: 0;
     }
 	a {
+		display:inline;
+
 		&:link,
 		&:visited,
 		&:active {
@@ -103,6 +105,7 @@
 	  padding-left: 15px;
 	  margin-right: auto;
 	  margin-left: auto;
+	  //max-width:100%;
 	}
 	@media (min-width: 768px) {
 	  .container {
@@ -3188,7 +3191,7 @@
         display: block;
         box-shadow: #e6e5e5 3px 5px 5px;
         border-radius: 10px;
-        border: 1px solid #efefef;
+        border: 1px solid #00000015;
         overflow: hidden;
         position: relative;
         max-height: 100%;
@@ -3264,7 +3267,7 @@
         width: 100%;
         line-height: 2em;
         padding: 4px 18px;
-        border: 1px solid #efefef;
+        border: 1px solid #00000015;
         box-shadow: none;
         font-family: 'Roboto', Ubuntu, Arial, Verdana, sans-serif;
         border-radius: 6px;
@@ -3291,7 +3294,7 @@
     .webclient_table thead th {
         text-transform: uppercase;
         padding: 5px 0;
-        border-bottom: 1px solid #efefef;
+        border-bottom: 1px solid #00000015;
     }
     .webclient_table thead tr {
         margin-bottom:10px;
@@ -3319,7 +3322,7 @@
         height:auto;
     }
     .webclient_table tbody tr {
-        border-bottom:1px solid #efefef;
+        border-bottom:1px solid #00000015;
     }
 
     ul.myf_switch_menu {
@@ -3332,13 +3335,13 @@
 
     ul#myf_store_switch.myf_switch_menu li {
         padding: 0 3px;
-        margin: 0;
+        margin: 0 0 1em 0;
         list-style-type: none;
         display: block;
         height: 58px;
         line-height: 58px;
         margin-right: 0;
-        border-bottom: 1px solid #cbcbcb;
+		border-bottom: 1px solid #cbcbcb;
     }
 
 
@@ -3486,17 +3489,17 @@
         text-transform: uppercase;
         color: #999;
         padding-bottom: 1em;
-        border-bottom: 1px solid #efefef;
+        border-bottom: 1px solid #00000015;
     }
     .webclient_table .table > tbody > tr > td {
-        background-color:#fff;
+        background-color:transparent;
         vertical-align:middle;
     }
     .webclient_table .table > tbody > tr:first-child > td {
         padding-top: 1em;
     }
     .webclient_table .table img.webclient_table-logo {
-        border:1px solid #efefef;
+        border:1px solid #00000015;
         width:60px;
     }
 
@@ -3662,9 +3665,9 @@
         background-color: #fff;
         border-radius: 4px;
         padding: 2em;
-        border: 1px solid #efefef;
+        border: 1px solid #00000015;
         font-size:14px;
-        box-shadow: 1px 2px 8px #efefef;
+        box-shadow: 1px 2px 8px #00000015;
     }
 
     .webclient_white_card h4 {
@@ -3749,7 +3752,7 @@
     }
 
     .webclient_table .table img.webclient_table-logo {
-        border: 1px solid #efefef;
+        border: 1px solid #00000015;
         width: 60px;
     }
 
@@ -3999,7 +4002,7 @@
     }
 
     .muuri-content--full-size .mu_item .mu_item__img {
-        border: 1px solid #efefef;
+        border: 1px solid #00000015;
         width: 100px;
         height: auto;
         box-shadow: rgba(0,0,0,0.1) 1px 1px 12px;

@@ -1,5 +1,3 @@
-var chris_debug;
-
 $(document).ready(function() {
     //var content = $('#external-content');
     //content.load(content.attr('data-external-url'));  
@@ -383,7 +381,5 @@ const webclient_modal_event_form = function(e) {
     opt.data[$input.attr('name')] = $input.attr('value') || '';
     opt.data[$submitter.attr('name')] = '1';
     
-    console.log(opt.data);
-
     $form.ajaxSubmit(opt);
 };
