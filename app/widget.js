@@ -1,4 +1,4 @@
-$(document).ready(function() {
+//$(document).ready(function() {
     //var content = $('#external-content');
     //content.load(content.attr('data-external-url'));  
     const modal = document.createElement('div');
@@ -9,7 +9,7 @@ $(document).ready(function() {
     modal.appendChild(modal_inner_content);
     
     document.body.appendChild(modal);
-});
+//});
 
 const myf_modal_url = function(url) { };
 
