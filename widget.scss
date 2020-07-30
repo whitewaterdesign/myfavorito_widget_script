@@ -3091,6 +3091,8 @@
 #external-content {
     color:#36464c;
     font-size:14px;
+	z-index:1;
+	position: relative;
 
     .row-m5 {
         margin-left:-5px;
@@ -3121,28 +3123,27 @@
         margin:10px 0em;
         height:45px;
         line-height:45px;
-    }
-
-    ul#myf_store_switch.myf_switch_menu li.noborder,
+	}
+	
+	
+	ul#myf_store_switch.myf_switch_menu li.noborder,
     ul#myf_store_switch.myf_switch_menu li:hover.noborder,
     ul.myf_sportwidget_nav li.noborder {
         border:0 none;
         background-color:transparent;
-    }
-	ul#myf_store_switch.myf_switch_menu #myf-user {
-        float:right;	
-	}
-	ul#myf_store_switch.myf_switch_menu #myf-user,
-	ul#myf_store_switch.myf_switch_menu #myf-user-medium {
-        font-size:1.3em;
 	}
 	
-	ul#myf_store_switch.myf_switch_menu #myf-user-medium {
-        float:right;	
-    }
-
-    ul.myf_sportwidget_nav > li:first-child a {
-    }
+	ul#myf_store_switch.myf_switch_menu {
+		#myf-user,
+		#myf-user-medium {
+			font-size:1.3em;
+			float:right;	
+		}
+		
+		
+	}
+    
+	
     ul.myf_sportwidget_nav li a {
         font-size:15px;
         text-transform:uppercase;
@@ -3332,57 +3333,82 @@
         margin-bottom: 2em;
         overflow:visible;
     }
+	ul#myf_store_switch.myf_switch_menu {
+		li {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			display: block;
+			height: 58px;
+			line-height: 58px;
+			margin-right: 0;
+			border-bottom: 1px solid #cbcbcb;
 
-    ul#myf_store_switch.myf_switch_menu li {
-        padding: 0 3px;
-        margin: 0 0 1em 0;
-        list-style-type: none;
-        display: block;
-        height: 58px;
-        line-height: 58px;
-        margin-right: 0;
-		border-bottom: 1px solid #cbcbcb;
-    }
+			@media (min-width:768px) {
+				margin: 0 0 1em 0;
+			}
+			
+			a {
+				height:58px; 
+				display:block;
+				font-size: 14px;
+				text-transform: uppercase;
+				text-align:left;
+				padding: 20px 1.25em;
+				line-height:18px;
 
+				@media (min-width:768px) {
+					display:inline;
+					text-align:center;
+					line-height: 58px;;
+				}
+				
+				&:link, 
+				&:active, 
+				&:visited {
+					text-decoration: none;
+					color: #36464c;
+				}
+	
+				&:hover {
+					background-color:#36464c;
+					color:#f7f6f6;
+				}
+			}
 
-    ul#myf_store_switch.myf_switch_menu li.nav-dropdown {
-        border-bottom-color:transparent;
-    }
-    ul#myf_store_switch.myf_switch_menu li.active,
-    ul#myf_store_switch.myf_switch_menu li:hover {
-        border-bottom: 4px solid #36464c;	
-    }
+			&.my_sponsor a,
+			&#myf-user a {
+				padding: 11px 1.1em;
+				line-height:58px;
+				display:inline;
+			}
 
-    ul#myf_store_switch.myf_switch_menu li.active {
-        font-weight: 500;
-    }
+			&.nav-dropdown {
+				border-bottom-color:transparent;
+			}
 
-    ul#myf_store_switch.myf_switch_menu li:hover {
-        background-color:#36464c;
-    }
+			&.active,
+			&:hover {
+				border-bottom: 4px solid #36464c;	
+			}
 
-    ul#myf_store_switch.myf_switch_menu li#myf-nav-actioncode:hover {
-        background-color:transparent;
-        border-bottom-color:transparent;
-    }
+			&.active {
+				font-weight: 500;
+			}
 
-    ul#myf_store_switch.myf_switch_menu li:hover a:link,
-    ul#myf_store_switch.myf_switch_menu li:hover a:active,
-    ul#myf_store_switch.myf_switch_menu li:hover a:visited {
-        color:#f7f6f6;
-    }
+			&#myf-nav-actioncode:hover {
+				background-color:transparent;
+				border-bottom-color:transparent;
+			}
 
-    ul.myf_switch_menu li a {
-        padding: 11px 1em;
-        font-size: 14px;
-        text-transform: uppercase;
-    }
-    ul.myf_switch_menu li a:link, 
-    ul.myf_switch_menu li a:active, 
-    ul.myf_switch_menu li a:visited {
-        text-decoration: none;
-        color: #36464c;
-    }
+			
+		}
+
+		
+	}
+  
+
+    
 
     ul.myf_switch_menu #actioncode {
         padding-right: 49px;
@@ -4167,14 +4193,15 @@
         background-image: url('https://www.myfavorito.com/en/app/media/resource/_ju9szjfw.deliver?layout=og.png');
         background-size: cover;
         background-position: center;
-    }
+    }  
 
     #myf-login-wrap {
         background-color: rgba(23,23,23,0.79);
 		padding: 1.5em 0 2em;
 		
-		.container {
+		.container { 
 			max-width:100%;
+			min-width:unset;
 		}
     }
 
