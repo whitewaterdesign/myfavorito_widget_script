@@ -3139,10 +3139,7 @@
 			font-size:1.3em;
 			float:right;	
 		}
-		
-		
 	}
-    
 	
     ul.myf_sportwidget_nav li a {
         font-size:15px;
@@ -4649,3 +4646,6 @@
     }
 }
 
+#external-content.custom-width .container {
+	max-width:100%;
+}
