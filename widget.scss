@@ -4645,6 +4645,10 @@
     }
 }
 
+#external-content.no-padding .container {
+	padding:0;
+}
+
 #external-content.custom-width .container {
 	max-width:100%;
 }
