@@ -4625,8 +4625,8 @@
 }
 
 // Section 3 end: #myf_modal
-
-
+.myf-container-fluid #external-content .container,
+#external-content.myf-container-fluid .container,
 .container #external-content .container {
 	width:auto;
 	max-width:100%;
