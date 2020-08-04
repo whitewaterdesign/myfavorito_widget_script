@@ -3285,6 +3285,7 @@
         border: 0 none;
     }
 
+	
     .webclient_table table {
         border:0 none;
         font-size:14px;
@@ -3753,6 +3754,95 @@
         text-transform: uppercase;
     }
 
+	#community_toolbar {
+		
+		margin-bottom:3em;
+
+		select {
+			margin-bottom:1em;
+		}
+		.myf-header-input.arrow-right {
+			&::after {
+				display:none;
+			}
+			.myf-header-input__button {
+				right: 0;
+				top: 0;
+				left:auto;
+				border-radius: 0px 6px 6px 0px;
+				position: absolute;
+				z-index: 3;
+				background-color: #36464c;
+				color: #fff;
+				padding: 11px 15px;
+				border: 0 none;
+				cursor: pointer;
+			}
+		}
+		.myf-header-checkbox {
+
+			#community-mix-open-selection {
+				margin-left: 0;
+				position: relative;
+				visibility: hidden;
+				
+				+ label {
+					padding-left: 0;
+					margin-left: -12px;
+					font-size: 14px;
+					font-weight: 400;
+					padding: 12px 0;
+					white-space: nowrap;
+					display:inline-block;
+					line-height:20px;
+
+					&::before {
+						content: "";
+						font-family: "Glyphicons Halflings";
+						font: normal normal normal 14px/1 "Glyphicons Halflings";
+						text-rendering: auto;
+						-webkit-font-smoothing: antialiased;
+						-moz-osx-font-smoothing: grayscale;
+						margin-right: 0.75em;
+						line-height: 14px;
+						background-color: #36464c;
+						color: #fff;
+						border: 1px solid #36464c;
+						border-radius: 3px;
+						width: 21px;
+						height: 21px;
+						display: block;
+						float: left;
+						padding: 2px;
+					}
+				}
+
+				&:hover + label::before,
+				&:checked + label::before {
+					content: "\e013";
+				}
+				
+				&:checked:hover + label::before ,
+				&:checked:focus + label::before {
+					content: "";
+				}
+			}
+
+		}
+
+		.myf-header-input__submit {
+			position: relative;
+			float: right;
+
+			button.btn-reset {
+				display: inline-block;
+				line-height: 45px;
+				padding: 0 14px;
+				color: #fff;
+				background-color: #36464c;
+			}
+		}
+	}
     .myf_bestmember_ranking {
         background-color: #ee781d;
         padding: 0.5em;
