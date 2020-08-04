@@ -2,30 +2,64 @@
 <html><head>
 	<meta charset="UTF-8">
 	<title>MyFavorito Community Widget: Production v1</title>
-</head><body>
+	<style>
+		body, h1 { font-family:Arial, Helvetica, sans-serif;}
+		.container {
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-right: auto;
+			margin-left: auto;
+			//max-width:100%;
+		}
+		@media (min-width: 768px) {
+			.container {
+				width: 750px;
+			}
+		}
+		@media (min-width: 992px) {
+			.container {
+				width: 970px;
+			}
+		}
+		@media (min-width: 1200px) {
+			.container {
+				width: 1170px;
+			}
+		}
+	</style>
+</head>
 
-<!-- start copy block -->
-<link rel="stylesheet" type="text/css" href="https://www.myfavorito.com/?t=/sportsclub_widget/lib/widget.min.css">
-<div id="external-content" data-external-url="https://www.myfavorito.com/en?t=/sportsclub_widget/widget&cid=1530531138782" style=""></div>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
-<script src="https://www.myfavorito.com/?t=/sportsclub_widget/lib/widget.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-	var myFavoritoContent = $('#external-content');
-	$.ajax({
-		url:myFavoritoContent.attr('data-external-url'),
-		method: 'POST',
-		crossDomain: true,
-		xhrFields: {
-      		withCredentials: true
-   		}
-	}).done(function(data,result,xhr){
-		myFavoritoContent.html(data);
+<body>
+	<div class="container">
+		<small>container</small>
+	</div>
+<div class="container" style="border:1px solid red;">
+	<h1>My Site</h1>
+	<small>inside container</small>
+	<div style="border:1px solid seagreen">
+	<!-- start copy block -->
+	<link rel="stylesheet" type="text/css" href="https://www.myfavorito.com/?t=/sportsclub_widget/lib/widget.min.css">
+	<div id="external-content" class="myf-container-fluid no-padding" data-external-url="https://www.myfavorito.com/en?t=/sportsclub_widget/widget&cid=1530531138782" style=""></div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+	<script src="https://www.myfavorito.com/?t=/sportsclub_widget/lib/widget.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var myFavoritoContent = $('#external-content');
+		$.ajax({
+			url:myFavoritoContent.attr('data-external-url'),
+			method: 'POST',
+			crossDomain: true,
+			xhrFields: {
+				withCredentials: true
+			}
+		}).done(function(data,result,xhr){
+			myFavoritoContent.html(data);
+		});
 	});
-});
-</script>
-<!-- /end copy block -->
-
+	</script>
+	<!-- /end copy block -->
+		</div>
+	</div>
 </body></html>
 
