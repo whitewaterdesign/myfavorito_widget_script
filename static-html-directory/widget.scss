@@ -50,7 +50,11 @@
         
     }
     ol, ul {
-        list-style: none;
+		list-style: none;
+		
+		li::before {
+			background-color:transparent;
+		}
     }
     blockquote, q {
         quotes: none;
