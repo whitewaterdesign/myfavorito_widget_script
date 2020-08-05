@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+	<meta charset="utf-8" />
+	<base href="https://www.sydneyfc.com">
+<meta name="twitter:card" content="summary" />
+<link rel="shortcut icon" href="/sites/syd/favicons/favicon.ico" />
+<meta property="og:site_name" content="Sydney FC" />
+<meta property="og:url" content="https://www.sydneyfc.com/sydney-fc-business-club" />
+<link rel="icon" sizes="16x16" href="/sites/syd/favicons/favicon-16x16.png" type="image/png" />
+<meta property="og:title" content="Sydney FC Business Club" />
+<meta name="keywords" content="Sydney FC news, , ," />
+<link rel="icon" sizes="32x32" href="/sites/syd/favicons/favicon-32x32.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/sites/syd/favicons/apple-touch-icon.png" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="msapplication-config" content="/sites/syd/favicons/browserconfig.xml" />
+<meta name="msapplication-tilecolor" content="#fefefe" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="article:modified_time" content="2019-10-02T14:32:07" />
+<meta property="article:published_time" content="2019-08-09T15:52:59" />
+<script type="text/javascript">
+// Initialize the google variables.
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+// Add a place to store the slot name variable.
+googletag.slots = googletag.slots || {};
+(function() {
+  var useSSL = "https:" == document.location.protocol;
+  var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+  document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+
+/**
+ * Returns the visibility order of each slot ad.
+ */
+function getSlotVisibilityOrder(str) {
+  if (str.includes("out_of_page")) {
+    return 0;
+  } else if (str.includes("leaderboard")) {
+    return 1;
+  } else if (str.includes("m_rec_top")) {
+    return 2;
+  } else if (str.includes("m_rec_bottom")) {
+    return 3;
+  } else {
+    return 4;
+  }
+}
+</script>
+<script type="text/javascript">
+        // Start by defining breakpoints for this ad.
+      var mapping = googletag.sizeMapping()
+                        .addSize([1024, 768], [[728, 90], [970, 250], [970, 90]])
+                                .addSize([980, 690], [728, 90])
+                                .addSize([0, 0], [320, 50])
+                    .build();
+  
+  // Create ads object to handle lazy loading behaviour.
+  var slotOrder = getSlotVisibilityOrder("leaderboard");
+  googletag.slots[slotOrder] = {
+    id: 'leaderboard',
+    name: null,
+    placeholderId: 'js-dfp-tag-leaderboard',
+    hasRefreshed: false,
+    size: '[[320, 50], [728, 90], [970, 90]]'
+  };
+
+  googletag.slots[slotOrder].name = googletag.defineSlot("/21634322719/Leaderboard", [[320, 50], [728, 90], [970, 90]], "js-dfp-tag-leaderboard")
+
+    .addService(googletag.pubads())
+
+  
+  
+  
+        // Apply size mapping when there are breakpoints.
+    .defineSizeMapping(mapping)
+    ;
+</script>
+<script type="text/javascript">
+  googletag.cmd.push(function () {
+          googletag.pubads().enableAsyncRendering();
+              googletag.pubads().enableSingleRequest();
+              googletag.pubads().collapseEmptyDivs();
+              googletag.pubads().disableInitialLoad();
+              googletag.pubads().setTargeting('site', ['syd']);
+          googletag.pubads().setTargeting('category', ['Landing Page']);
+          googletag.pubads().setTargeting('url', ['/sydney-fc-business-club']);
+      });
+  googletag.enableServices();
+
+      /**
+     * Checks if a given element is visible in the viewport (screen).
+     */
+    var isInViewport = function (elem) {
+      var distance = elem.getBoundingClientRect();
+      return (
+        distance.top >= 0 &&
+        distance.left >= 0 &&
+        distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    /**
+     * Returns TRUE if all ads have been displayed in the screen, FALSE otherwise.
+     */
+    var haveAllAdsBeenDisplayed = function () {
+      var adsDisplayed = 0;
+      var adsLength = Object.keys(googletag.slots).length;
+
+      Object.keys(googletag.slots).forEach(function (key) {
+        adsDisplayed += (this[key].hasRefreshed) ? 1 : 0;
+      }, googletag.slots);
+
+      return adsLength === adsDisplayed;
+    };
+
+    /**
+     * Loads ads only when they are within the viewport.
+     */
+    var manageAdsVisibility = function () {
+      var slotEl, slotObj;
+
+      Object.keys(googletag.slots).forEach(function (key) {
+        slotObj = this[key];
+        slotEl = document.getElementById(slotObj.placeholderId).parentNode;
+
+        if ((isInViewport(slotEl) && !slotObj.hasRefreshed) || (slotObj.size === '[1, 1]' && !slotObj.hasRefreshed)) {
+          googletag.cmd.push(function () {
+            googletag.pubads().refresh([slotObj.name]);
+          });
+
+          // Refresh the ad only once.
+          slotObj.hasRefreshed = true;
+        }
+
+      }, googletag.slots);
+
+      if (haveAllAdsBeenDisplayed()) {
+        window.removeEventListener('scroll', manageAdsVisibility);
+      }
+    };
+
+    /**
+     * Checks ads visibility on page scrolling.
+     */
+    document.addEventListener("DOMContentLoaded", function () {
+      manageAdsVisibility();
+      window.addEventListener('scroll', manageAdsVisibility);
+    });
+  </script>
+<link rel="canonical" href="/sydney-fc-business-club" />
+<link rel="revision" href="/sydney-fc-business-club" />
+<script>(function(w,d,s,l,i){
+
+  w[l]=w[l]||[];
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  var f=d.getElementsByTagName(s)[0];
+  var j=d.createElement(s);
+  var dl=l!='dataLayer'?'&amp;l='+l:'';
+  j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';
+  j.async=true;
+  f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-5DNNV7Q');</script>
+
+    <title>Sponsorship</title>
+    <link rel="stylesheet" href="/sites/syd/files/css/css_5Mz0wpOL20s_SQKXnhCWyA5ZJOgQQg26tUyGV0jHiCA.css?qe8hm4" media="all" />
+<link rel="stylesheet" href="/sites/syd/files/css/css_x5RvileAcqfairtkRceQRK5Qdi6eWAA1AtCAnzMvLp0.css?qe8hm4" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/syd/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-landing-page site-syd">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DNNV7Q" height="0" width="0"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="layout-container">
+    <div class="region region-header-top">
+    <div id="block-dfptagleaderboard" data-block-plugin-id="dfp_ad:79679a07-5e56-4623-8156-de9199163fa1" class="o-1/1 block-dfp">
+  
+    
+      <div id="js-dfp-tag-leaderboard"  class="dfp-tag">
+    <script type="text/javascript">
+    googletag.cmd.push(function () {
+      googletag.display('js-dfp-tag-leaderboard');
+          });
+  </script>
+</div>
+
+  </div>
+
+  </div>
+
+  <header role="banner" class="display-panel">
+    
+    	<nav class="network-nav" id="js-network-nav-auth-details" data-isauth="" data-reglink="">
+		<div class="o-block o-block--corset network-nav__inner">
+			<span class="network-nav__text-logo">footb<i class="network-nav__brand-color-text">all</i></span>
+			<span class="network-nav__subtext-logo">Network</span>
+			<ul class="network-nav__menu">
+                					<li class="network-nav__item">
+						<a href="https://www.myfootball.com.au" class="network-nav__link">
+                            My Football
+						</a>
+					</li>
+                					<li class="network-nav__item">
+						<a href="https://www.playfootball.com.au" class="network-nav__link">
+                            Play Football
+						</a>
+					</li>
+                					<li class="network-nav__item">
+						<a href="https://www.ffa.com.au" class="network-nav__link">
+                            FFA.com.au
+						</a>
+					</li>
+                					<li class="network-nav__item">
+						<a href="https://www.playfootball.com.au/miniroos" class="network-nav__link">
+                            MiniRoos
+						</a>
+					</li>
+                			</ul>
+
+            		</div>
+	</nav>
+
+
+  
+	<div class="branded-header__wrap">
+		<div class="branded-header branded-header--brand-color">
+			<div class="o-block o-block--corset branded-header__inner">
+                					<a href="/" target="_self" class="branded-header__logo-link">
+						<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/sydneyfc-logo.png?itok=wYiE15f1" alt="" class="branded-header__logo-image">
+					</a>
+                
+                
+                
+                                                        	<div class="social-links social-links--light social-links--branded-header">
+        			<a href="https://www.facebook.com/SydneyFootballClub" target="_blank"
+			   class="social-links__link social-links__link--facebook"
+			></a>
+        			<a href="https://www.instagram.com/sydneyfootballclub/" target="_blank"
+			   class="social-links__link social-links__link--instagram"
+			></a>
+        			<a href="https://www.youtube.com/user/officialsydneyfc" target="_blank"
+			   class="social-links__link social-links__link--youtube"
+			></a>
+        			<a href="https://twitter.com/SydneyFC" target="_blank"
+			   class="social-links__link social-links__link--twitter"
+			></a>
+        	</div>
+
+                
+                
+                
+				<div class="branded-header__hamburger js-nav-hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+      	<nav class="branded-nav js-nav-overlay">
+		<div class="o-block o-block--corset branded-nav__inner js-mobile-slide-nav">
+			<ul class="branded-nav__area branded-nav__area--left">
+                                    					<li class="branded-nav__item js-nav-expand-item js-overlay-trigger">
+                        							<a href="/news"
+                                    										target="_self"
+                                    							   class="branded-nav__link js-nav-link">News</a>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Featured
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/news"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Latest News</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/galleries"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Galleries</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/community-news"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Community News</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Categories
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/press-releases"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Press Releases</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/match-reports"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Match Reports</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            COVID-19
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/COVID19-MemberUpdate"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Member Access to Remaining Home Games</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/covid-19-faqs"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>COVID-19 FAQ&#039;s</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                                    					<li class="branded-nav__item js-nav-expand-item js-overlay-trigger">
+                        							<a href="/videos"
+                                    										target="_self"
+                                    							   class="branded-nav__link js-nav-link">Video</a>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Featured
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/videos"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Latest Videos</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/our-exclusive-live-chats"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Our Exclusive LIVE Chats!</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                                    					<li class="branded-nav__item js-nav-expand-item js-overlay-trigger">
+                        							<a href="/fixtures"
+                                    										target="_self"
+                                    							   class="branded-nav__link js-nav-link">Fixtures</a>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header branded-nav__list-header--with-image">
+                                                                                                            ECAL - Sync Our Fixtures!
+                                                    												</h4>
+                                                													<a href="https://bit.ly/2VoXJ3c" target="_blank" class="branded-nav__image-link">
+														<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2019-01/Sydney-FC-1819---eCAL---WEBSITE-BANNER-600x300.jpg?itok=8wpq7VLj" alt="" />
+													</a>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Fixtures &amp; Results
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/fixtures#!/t1962"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Hyundai A-League</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/fixtures#!/t9412"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Westfield W-League</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/fixtures#!/t9422"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Foxtel National Youth League</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Ladders
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/a-league-ladder"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Hyundai A-League Ladder</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/w-league-ladder"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Westfield W-League Ladder</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/y-league-ladder"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Foxtel Y-League Ladder</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                                    					<li class="branded-nav__item js-nav-expand-item branded-nav__item--dropdown-only js-overlay-trigger">
+                        							<span class="branded-nav__link js-nav-link">Teams</span>
+							<i class="branded-nav__chevron"></i>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Squads
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/teams"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Hyundai A-League Squad</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/teams#!/w-league"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Westfield W-League Squad</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/teams#!/y-league"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Foxtel National Youth League Squad</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                                    					<li class="branded-nav__item js-nav-expand-item js-overlay-trigger">
+                        							<a href="https://www.sydneyfc.com/academy"
+                                    										target="_blank"
+                                    							   class="branded-nav__link js-nav-link">NPL &amp; Academy</a>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            The Sydney FC Foundation
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://asf.org.au/projects/sydney-football-club-foundation/"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>The Foundation</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Academy Details
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/our-vision"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Our Vision</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/academy-director"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Technical Director - Youth</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/expression-interest"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Expression Of Interest</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/sydney-fc-academy-football-schools"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Sydney FC Academy Football Schools</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Teams
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/under-13s"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Under 13&#039;s</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/under-14s"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Under 14&#039;s</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/under-15s"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Under 15&#039;s</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/under-16s"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Under 16&#039;s</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/under-18s"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Under 18&#039;s</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/under-20s"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Under 20&#039;s</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/first-grade-under-20s"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>First Grade</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Fixtures &amp; Results
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="http://websites.sportstg.com/comp_info.cgi?a=ROUND&amp;c=1-10179-0-514714-0"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>2020 Fixtures &amp; Results</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                                    					<li class="branded-nav__item js-nav-expand-item branded-nav__item--dropdown-only js-overlay-trigger">
+                        							<span class="branded-nav__link js-nav-link">Game Day Info</span>
+							<i class="branded-nav__chevron"></i>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Home Games
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/COVID19-MemberUpdate"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Member Access to Remaining Home Games</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/stadium-seating-maps"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Stadium Seating Maps</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/our-stadium-a-zs"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Stadium A-Z&#039;s</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Away Games
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/our-home-away-from-home"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Our Home Away From Home At The Star</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Junior Blues
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/junior-blues-program"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Junior Blues Program</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sfcjuniorblues.com/"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Junior Blues Website</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                                    					<li class="branded-nav__item js-nav-expand-item js-overlay-trigger">
+                        							<a href="https://www.sydneyfc.com/sydney-fc-business-club"
+                                    										target="_blank"
+                                    							   class="branded-nav__link js-nav-link">Corporate</a>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+													Sponsorship
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/sydney-fc-business-club"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Become A Member</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/business-club-directory "
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Business Club Members</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Our Partners
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/principal-partner"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Principal Partner</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/partners"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Premium Partners</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/major-partners"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Major Partners</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/media-partner"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Media Partner</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/official-partners"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Official Partners</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/westfield-w-league-partners"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Westfield W-League Partners</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Hospitality &amp; Events
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/hospitality"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Hospitality</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/events"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Events</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                                    					<li class="branded-nav__item js-nav-expand-item js-overlay-trigger">
+                        							<a href="https://www.sydneyfc.com/community"
+                                    										target="_blank"
+                                    							   class="branded-nav__link js-nav-link">Community</a>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Holiday Clinics
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/clinics"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>What are our Holiday Clinics?</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://my.sydneyfc.com/clinic"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Venues &amp; Registration</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/testimonials"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Testimonials</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/clinic-programs-covid-safety-faq"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Holiday Clinic COVID19 FAQ</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Skills Training Program
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/STP"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>What is our Skills Training Program?</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://my.sydneyfc.com/clinic"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Venues &amp; Registration</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/clinic-programs-covid-safety-faq"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>STP COVID-19 FAQ</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/sites/syd/files/2020-07/Skills%20Training%20FAQS.pdf"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Skills Training Program FAQ&#039;s</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Train From Home
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/skills-training-hub"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Skills Training Hub</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/KeepFit"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Keep Fit At Home</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/backyardskills"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Backyard Skills</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Our Community
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/school-teacher-programs"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>School Programs</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/our-associations"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Our Associations</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/donation-requests"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Donation Requests</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                                    					<li class="branded-nav__item js-nav-expand-item branded-nav__item--dropdown-only js-overlay-trigger">
+                        							<span class="branded-nav__link js-nav-link">About Us</span>
+							<i class="branded-nav__chevron"></i>
+                        						<div class="branded-nav__plus js-nav-expand-trigger"></div>
+                        							<div class="branded-nav__content js-nav-expand-content">
+								<div class="o-block o-block--corset">
+									<div class="nav-grid-flex">
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Memberships
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/sites/syd/files/2018-08/Sydney%20FC%20Membership%20Terms%20Conditions%2022082018.pdf"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Membership Terms &amp; Conditions</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/membership"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Become A Member In 2019</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/buddies"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Discover Our Great New Family Package</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                        											<div class="nav-grid-flex__item o-1/4@760 branded-nav__column">
+												<h4 class="branded-nav__list-header">
+                                                                                                            Info
+                                                    												</h4>
+                                                													<ul class="branded-nav__list">
+                                                        															<li class="branded-nav__list-item">
+																<a href="/contact-us"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Contact Us</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://shop.playbill.com.au/Sydney-FC/"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Club Shop</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/history"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>History</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/15Moments?utm_source=Website%20"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Video History</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/hall-fame"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Hall Of Fame</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/our-eternal-members"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Eternal Members</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/sydney-fc-board-members"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Board Members</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/administration"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Administration</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="/sydney-fc-privacy-policy"
+																   target="_self"
+																   class="branded-nav__content-link"
+																>Sydney FC Privacy Policy</a>
+															</li>
+                                                        															<li class="branded-nav__list-item">
+																<a href="https://www.sydneyfc.com/sites/syd/files/2019-11/Sydney%20FC%20Values.pdf"
+																   target="_blank"
+																   class="branded-nav__content-link"
+																>Sydney FC Values</a>
+															</li>
+                                                        													</ul>
+                                                											</div>
+                                                                                									</div>
+								</div>
+							</div>
+                        					</li>
+                			</ul>
+			<ul class="branded-nav__area branded-nav__area--right">
+                					<li class="branded-nav__item">
+						<a href="https://my.sydneyfc.com/"
+						   target="_blank"
+						   class="branded-nav__link branded-nav__link--without-dropdown branded-nav__link--with-icon">
+							<i class="branded-nav__icon">
+								<img src="/libraries/styleguide/styleguide/db/dist/assets/icons/branded-nav/icon--membership.png"></i>
+                            Membership
+						</a>
+					</li>
+                					<li class="branded-nav__item">
+						<a href="https://premier.ticketek.com.au/shows/show.aspx?sh=SYDNEYFC20"
+						   target="_blank"
+						   class="branded-nav__link branded-nav__link--without-dropdown branded-nav__link--with-icon">
+							<i class="branded-nav__icon">
+								<img src="/libraries/styleguide/styleguide/db/dist/assets/icons/branded-nav/icon--tickets.png"></i>
+                            Tickets
+						</a>
+					</li>
+                					<li class="branded-nav__item">
+						<a href="http://shop.playbill.com.au/Sydney-FC/"
+						   target="_blank"
+						   class="branded-nav__link branded-nav__link--without-dropdown branded-nav__link--with-icon">
+							<i class="branded-nav__icon">
+								<img src="/libraries/styleguide/styleguide/db/dist/assets/icons/branded-nav/icon--shop.png"></i>
+                            Shop
+						</a>
+					</li>
+                			</ul>
+                                            	<div class="social-links social-links--light social-links--branded-nav">
+        			<a href="https://www.facebook.com/SydneyFootballClub" target="_blank"
+			   class="social-links__link social-links__link--facebook"
+			></a>
+        			<a href="https://www.instagram.com/sydneyfootballclub/" target="_blank"
+			   class="social-links__link social-links__link--instagram"
+			></a>
+        			<a href="https://www.youtube.com/user/officialsydneyfc" target="_blank"
+			   class="social-links__link social-links__link--youtube"
+			></a>
+        			<a href="https://twitter.com/SydneyFC" target="_blank"
+			   class="social-links__link social-links__link--twitter"
+			></a>
+        	</div>
+
+            						<div class="branded-nav__mobile-suffix">
+                	<div class="network-nav network-nav--mobile">
+		<div class="network-nav__header-wrapper">
+			<span class="network-nav__text-logo">footb<i class="network-nav__brand-color-text">all</i></span>
+			<span class="network-nav__subtext-logo">Network</span>
+            		</div>
+        		<ul class="network-nav__menu">
+            				<li class="network-nav__item">
+					<a href="https://www.myfootball.com.au" class="network-nav__link">
+                        My Football
+					</a>
+				</li>
+            				<li class="network-nav__item">
+					<a href="https://www.playfootball.com.au" class="network-nav__link">
+                        Play Football
+					</a>
+				</li>
+            				<li class="network-nav__item">
+					<a href="https://www.ffa.com.au" class="network-nav__link">
+                        FFA.com.au
+					</a>
+				</li>
+            				<li class="network-nav__item">
+					<a href="https://www.playfootball.com.au/miniroos" class="network-nav__link">
+                        MiniRoos
+					</a>
+				</li>
+            		</ul>
+	</div>
+
+			</div>
+					</div>
+	</nav>
+	<div class="branded-nav__overlay js-nav-overlay-element"></div>
+
+  
+    
+  </header>
+
+  
+
+  <main role="main" >
+    <div class="o-layout">
+      <a id="main-content" tabindex="-1"></a>
+      <div class="layout-content o-layout__main">
+          <div class="region region-content">
+    
+<div id="block-fhtheme-content" data-block-plugin-id="system_main_block" class="o-1/1">
+  
+    
+      
+
+        <div class="page-heading has-background  page-heading--light o-vertical-rhythm--fixed"
+         style="background-image:url('/libraries/styleguide/styleguide/db/dist/assets/images/bg--page-header.png')">
+        <div class="page-heading__inner o-block o-block--corset">
+            <h1 class="page-heading__header ">
+                <span class="field field--name-title field--type-string field--label-hidden">Sponsorship</span>
+
+            </h1>
+            
+                    </div>
+    </div>
+
+<article class="article-detail">
+  
+    
+    <div class="o-block o-block--corset o--vertical-rhythm-child">
+    
+      <div class="field field--name-field-landing-max-width field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="paragraph paragraph--type--pg-body paragraph--view-mode--default">
+                          <div class="news-block">
+            <div class="o-block o-block--corset">
+                <div class="rich-text-output">
+                
+
+					<link rel="stylesheet" type="text/css" href="http://localhost/myfavorito-widget/static-html-directory/widget.css">
+
+					<div id="external-content" data-external-url="https://www.myfavorito.com/en?t=/sportsClubWidget/v2/index&cid=1530531138782" style=""></div>
+					<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+					<!-- <script src="./dist/main.js"></script> -->
+					<script src="http://localhost/myfavorito-widget/static-html-directory/app/widget.js"></script>
+					<script type="text/javascript">
+					$(document).ready(function() {
+						var myFavoritoContent = $('#external-content');
+						$.ajax({
+							url:myFavoritoContent.attr('data-external-url'),
+							method: 'POST',
+							crossDomain: true,
+							xhrFields: {
+								  withCredentials: true
+							   }
+						}).done(function(data,result,xhr){
+							myFavoritoContent.html(data);
+						});
+					});
+					</script>
+                <p></p>
+                </div>
+            </div>
+        </div>
+    
+      </div>
+</div>
+              <div class="field__item"><div class="o-1/1">
+          
+                
+    <div class="o-flex">
+                    <div class="o-flex__item o-1/2@660">
+                    <div class="designed-tile">
+        <a href="/sydney-fc-business-club-platinum" class="designed-tile__link" target="_self">
+            <div class="designed-tile__main"
+                 style="background-image:url('https://www.sydneyfc.com/sites/syd/files/styles/image_1200x/public/2019-08/Platinum.jpg?itok=YwUkfq0_')">
+                                                    <h3 class="designed-tile__heading">Platinum</h3>
+                            </div>
+                    </a>
+    </div>
+
+            </div>
+                    <div class="o-flex__item o-1/2@660">
+                    <div class="designed-tile">
+        <a href="/sydney-fc-business-club-gold" class="designed-tile__link" target="_self">
+            <div class="designed-tile__main"
+                 style="background-image:url('https://www.sydneyfc.com/sites/syd/files/styles/image_1200x/public/2019-08/Gold.jpg?itok=j1RIniY2')">
+                                                    <h3 class="designed-tile__heading">Gold</h3>
+                            </div>
+                    </a>
+    </div>
+
+            </div>
+                    <div class="o-flex__item o-1/2@660">
+                    <div class="designed-tile">
+        <a href="/sydney-fc-business-club-silver" class="designed-tile__link" target="_self">
+            <div class="designed-tile__main"
+                 style="background-image:url('https://www.sydneyfc.com/sites/syd/files/styles/image_1200x/public/2019-08/Silver.jpg?itok=6DnsWmFW')">
+                                                    <h3 class="designed-tile__heading">Silver</h3>
+                            </div>
+                    </a>
+    </div>
+
+            </div>
+                    <div class="o-flex__item o-1/2@660">
+                    <div class="designed-tile">
+        <a href="/sydney-fc-business-club-bronze" class="designed-tile__link" target="_self">
+            <div class="designed-tile__main"
+                 style="background-image:url('https://www.sydneyfc.com/sites/syd/files/styles/image_1200x/public/2019-08/Bronze.jpg?itok=-oZncpFw')">
+                                                    <h3 class="designed-tile__heading">Bronze</h3>
+                            </div>
+                    </a>
+    </div>
+
+            </div>
+            </div>
+
+  </div></div>
+              <div class="field__item">    <div class="script-block script-block--ad">
+        <script src="//app-sn01.marketo.com/js/forms2/js/forms2.min.js"></script>
+<form id="mktoForm_1133"></form>
+<script>MktoForms2.loadForm("//app-sn01.marketo.com", "177-MBG-628", 1133);</script>
+    </div>
+
+</div>
+          </div>
+  
+  </div>
+  <div class="o-block o-block--corset">
+    <div class="o-layout">
+      <main class="o-layout__main o--vertical-rhythm-child">
+        
+        <div class="o--vertical-rhythm--top">
+            
+        </div>
+      </main>
+      <aside class="o-layout__sidebar o--vertical-rhythm-child">
+        <div class="js-stick-sidebar">
+                            </div>
+      </aside>
+    </div>
+  </div>
+  <div class="o-block o-block--corset o-vertical-rhythm--small o--vertical-rhythm-child">
+      
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+      </div>    </div>
+  </main>
+
+  
+      <footer role="contentinfo" class="display-panel">
+        <div class="region region-footer">
+    <div id="block-sponsors" data-block-plugin-id="block_content:11eabee5-bf1b-4dc3-bc88-f7fa5391a8d0" class="o-1/1">
+  
+    
+      
+
+	<div class="footer-sponsors js-stick-stopper">
+					<h4 class="footer-sponsors__header">Official Sydney FC Partners</h4>
+				<div class="o-block o-block--corset">
+			<div class="footer-sponsors__wrapper">
+									<div class="footer-sponsors__sponsor">
+													<a href="https://www.star.com.au/sydney/" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2017-10/Untitled-1.png?itok=fwD6pW5u" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+									<div class="footer-sponsors__sponsor">
+													<a href="https://www.kennards.com.au/" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/logo_kennards.png?itok=qUocOT5z" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+									<div class="footer-sponsors__sponsor">
+													<a href="https://www.fujitsugeneral.com.au/" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2018-10/Fujitsu%20Footer.png?itok=smpbtibp" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+									<div class="footer-sponsors__sponsor">
+													<a href="https://mcdonalds.com.au/learn/responsibility/maccas-community" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2018-06/Maccas%20Website.png?itok=BjN1EF9V" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+									<div class="footer-sponsors__sponsor">
+													<a href="https://www.underarmour.com.au/en-au/" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2019-07/UALogo_Lockup_White%20Footer.png?itok=3Bj9yMuM" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+							</div>
+		</div>
+	</div>
+
+
+
+	<div class="footer-sponsors js-stick-stopper">
+					<h4 class="footer-sponsors__header">Official Hyundai A-League Partners</h4>
+				<div class="o-block o-block--corset">
+			<div class="footer-sponsors__wrapper">
+									<div class="footer-sponsors__sponsor">
+													<a href="http://www.hyundai.com.au" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2017-09/hyundai.png?itok=TxieHfnC" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+									<div class="footer-sponsors__sponsor">
+													<a href="https://www.foxtel.com.au/index.html" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2018-10/Foxtel_Logo_Orange_220x80.png?itok=8zQhdhog" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+									<div class="footer-sponsors__sponsor">
+													<a href="https://www.foxsports.com.au" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2017-09/foxsports.png?itok=EKIoSz2_" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+									<div class="footer-sponsors__sponsor">
+													<a href="https://www.telstra.com.au/" target="_blank" class="footer-sponsors__link">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2018-05/Telstra%20Commercial%20Partner%20-%20Negative%20-%20Blue.png?itok=iF2R0Z-0" alt="" class="footer-sponsors__image">
+							</a>
+											</div>
+							</div>
+		</div>
+	</div>
+
+
+  </div>
+  		<footer class="footer-nav js-stick-stopper">
+		<div class="o-block o-block--corset footer-nav__inner">
+			<div class="nav-grid-flex nav-grid-flex--no-hgutter js-accordion">
+				<div class="nav-grid-flex__item o-1/4@760">
+					<div class="footer-nav__first-col">
+						<div class="footer-nav__logo-wrap">
+							<a href="/">
+								<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/sydneyfc-logo.png?itok=wYiE15f1" alt="" class="footer-nav__logo-image">
+							</a>
+															<a href="https://my.sydneyfc.com/#/">
+									<img src="https://www.sydneyfc.com/sites/syd/files/styles/image_600x/public/2018-09/ComeWithUs---350x100_0.png?itok=Hvwt5wY_" alt="" class="footer-nav__sublogo-image">
+								</a>
+													</div>
+						<div class="footer-nav__social-wrap">
+								<div class="social-links social-links--light ">
+        			<a href="https://www.facebook.com/SydneyFootballClub" target="_blank"
+			   class="social-links__link social-links__link--facebook"
+			></a>
+        			<a href="https://twitter.com/SydneyFC" target="_blank"
+			   class="social-links__link social-links__link--twitter"
+			></a>
+        			<a href="https://www.instagram.com/sydneyfootballclub/" target="_blank"
+			   class="social-links__link social-links__link--instagram"
+			></a>
+        			<a href="https://www.youtube.com/user/officialsydneyfc" target="_blank"
+			   class="social-links__link social-links__link--youtube"
+			></a>
+        	</div>
+
+							<div class="footer-nav__address">
+                                <p>Byron Kennedy Hall<br />
+Building 15<br />
+122 Lang Road<br />
+Moore Park NSW 2021</p>
+
+                            	+61 (2) 8314 5100
+							</div>
+													</div>
+					</div>
+				</div>
+									<div class="nav-grid-flex__item o-1/4@760 js-accordion__item footer-nav__menu">
+						<h4 class="footer-nav__header js-accordion__trigger">Sitemap<i
+									class="chevron chevron--bottom footer-nav__chevron"></i></h4>
+						<ul class="footer-nav__list js-accordion__content">
+															<li><a href="/" target="_self" class="footer-nav__link">Home</a></li>
+															<li><a href="/news" target="_self" class="footer-nav__link">News</a></li>
+															<li><a href="/videos" target="_self" class="footer-nav__link">Video</a></li>
+															<li><a href="/fixtures" target="_self" class="footer-nav__link">Fixtures</a></li>
+													</ul>
+					</div>
+									<div class="nav-grid-flex__item o-1/4@760 js-accordion__item footer-nav__menu">
+						<h4 class="footer-nav__header js-accordion__trigger">Teams<i
+									class="chevron chevron--bottom footer-nav__chevron"></i></h4>
+						<ul class="footer-nav__list js-accordion__content">
+															<li><a href="/teams#!/a-league" target="_self" class="footer-nav__link">A-League Squad</a></li>
+															<li><a href="/teams#!/w-league" target="_self" class="footer-nav__link">W-League Squad</a></li>
+															<li><a href="/teams#!/y-league" target="_self" class="footer-nav__link">Y-League Squad</a></li>
+													</ul>
+					</div>
+									<div class="nav-grid-flex__item o-1/4@760 js-accordion__item footer-nav__menu">
+						<h4 class="footer-nav__header js-accordion__trigger">More<i
+									class="chevron chevron--bottom footer-nav__chevron"></i></h4>
+						<ul class="footer-nav__list js-accordion__content">
+															<li><a href="https://my.sydneyfc.com/membership-purchase" target="_blank" class="footer-nav__link">Membership</a></li>
+															<li><a href="http://premier.ticketek.com.au/shows/show.aspx?sh=SYDNEYFC20" target="_blank" class="footer-nav__link">Tickets</a></li>
+															<li><a href="http://shop.playbill.com.au/Sydney-FC/" target="_blank" class="footer-nav__link">Shop</a></li>
+															<li><a href="/contact-us" target="_self" class="footer-nav__link">Contact</a></li>
+															<li><a href="/our-vision" target="_self" class="footer-nav__link">Academy</a></li>
+													</ul>
+					</div>
+							</div>
+		</div>
+	</footer>
+
+  		<footer class="footer-nav footer-nav--network js-stick-stopper">
+		<div class="o-block o-block--corset footer-nav__inner">
+			<div class="nav-grid-flex nav-grid-flex--no-hgutter js-accordion">
+				<div class="nav-grid-flex__item o-1/4@760">
+					<div class="footer-nav__first-col">
+						<div class="footer-nav__brand-logo">
+							<span class="footer-nav__text-logo">footb<i class="footer-nav__brand-color-text">all</i></span>
+							<span class="footer-nav__subtext-logo">Network</span>
+						</div>
+					</div>
+				</div>
+							</div>
+		</div>
+		<div class="o-block o-block--corset">
+			<div class="footer-nav__bottom-block">
+				<div class="footer-nav__policy-wrap">
+					<a href="https://www.ffa.com.au/privacy" class="footer-nav__policy">Privacy Policy</a>
+											<span class="footer-nav__divider">|</span>
+																<a href="https://www.ffa.com.au/legal" class="footer-nav__policy">Legal Notice</a>
+									</div>
+				<span class="footer-nav__rights">© 2019 Football Federation Australia ABN 28 106 478 068 | All Rights Reserved</span>
+			</div>
+		</div>
+	</footer>
+
+
+
+  </div>
+
+    </footer>
+  
+</div>
+  </div>
+ 
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/78986","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","fitvids":{"selectors":".node\r,.ifresponsive","custom_vendors":"iframe[src^=\u0022https:\/\/player.twitch.tv\u0022]","ignore_selectors":""},"betting_odds":[],"ajax":[],"user":{"uid":0,"permissionsHash":"bec39d66d789a8d8e6de622be56234c3900a8b742245104c641dcd7bc005d899"}}</script>
+<script src="/sites/syd/files/js/js_BaupD1b1RyIB49fG7a7PVMg8ZvbSJmHIlTWnZmKr9L8.js"></script>
+<script src="/libraries/styleguide/styleguide/db/dist/js/bundle.js?qe8hm4"></script>
+<script src="http://localhost:35729/livereload.js"></script>
+  </body>
+</html>
