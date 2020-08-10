@@ -11,11 +11,31 @@
     document.body.appendChild(modal);
 //});
 
+const myf_community_id = document.getElementById('external-content').dataset.communityId;
+
 const myf_modal_url = function(url) { };
 
-const muurigrid_modal = function(data,template) {
+const myf_ajax_post = function(url) {
 
-    let myelement = template;
+    $.post({
+        url:url,
+        crossDomain: true,
+        xhrFields: {
+              withCredentials: true
+           },
+        success:function(data){
+            data = data.replace(/\ssrc=\"\//g,' src="https://www.myfavorito.com/');
+            data = data.replace(/\shref=\"\//g,' href="https://www.myfavorito.com/');
+            data = data.replace(/\saction=\"\//g,' action="https://www.myfavorito.com/');
+            const content = $('#external-content');
+            content.html(data);	
+        }
+    });
+};
+
+const muurigrid_modal = function(data) {
+
+    let myelement = postVar.templates[data.type];
     
     let my_contact = '';
     
@@ -383,3 +403,99 @@ const webclient_modal_event_form = function(e) {
     
     $form.ajaxSubmit(opt);
 };
+
+
+const myFavoritoDigitalSponsors = [];
+
+let myF_result_data = {};
+
+const postVar = {
+    default_url:'https://www.myfavorito.com/json/v1/community/' + myf_community_id + '/sponsors/',
+    params: {
+        page: ''
+    },
+    action:'/sponsors/',
+    default_type:'',
+    default_category_id:'',
+    default_open:'0',
+    default_title_search:'',
+    page: '',
+    stats: {},
+    templates: {},
+    reset: function() {
+        this.params = {};
+    },
+    set type(type) {
+        if(type  != 'promotion') {
+            //this.type = type;
+            this.params.type = type;
+        }
+    },
+    set category_id(category_id) {
+        if(category_id != '-1') {
+            //this.category_id = category_id;
+            this.params.category_id = category_id;
+        }
+    },
+    set open(open) {
+        if(open == '1') {
+            //this.open = open;	
+            this.params.open = open;
+        }
+    },
+    set title_search(title_search) {
+        if(title_search != '') {
+            //this.title_search = title_search;
+            this.params.title_search = title_search;
+        }
+    },
+    set page(page) {
+        if(page  > 1) {
+            //this.type = type;
+            this.params.page = toString(page);
+        } else {
+            this.params.page = '';
+        }
+    },
+    url: function(page) {
+        let page_string = '', params_string = '';
+        if(page  > 1) {
+            //this.type = type;
+            page_string = page;
+        }
+        
+        if(this.params.length > 0) {
+            params_string = "?" + Object.keys(this.params).forEach(function(key){
+                key + '=' + this.params[key]
+            });
+        } 
+
+        return this.default_url + page_string + params_string;
+    },
+    init: function() {
+        $.get({
+            url: this.default_url
+        }).done(function(data){
+            myF_result_data = data;
+        });
+    },
+    getPromos: function() {
+        myFavoritoDigitalSponsors.length = 0;
+        
+        $.get({
+            url: this.url
+        }).done(function(data){
+            console.log(data);
+            Array.prototype.push.apply(myFavoritoDigitalSponsors, data.data);
+        });
+    },
+    change: function(e) {
+        e.preventDefault();
+        myf_ajax_post(this.default_url);
+    },
+    set setTemplates(setTemplates) {
+        this.templates = setTemplates;
+    }
+};
+
+postVar.init();

@@ -3185,9 +3185,20 @@
 <script src="https://www.myfavorito.com/?t=/sportsClubWidget/v2/lib/widget.js" defer></script>
 
 <script type="text/javascript">
+    
 	window.addEventListener('DOMContentLoaded', function() {
         (function($) {
             var myFavoritoContent = $('#external-content');
+            let myFavoritoDigitalSponsors;
+
+            $.ajax({
+				url:'https://www.myfavorito.com/json/v1/community/1530531138782/sponsors/',
+				method: 'GET',
+				crossDomain: true,
+			}).done(function(data,result,xhr){
+				let  
+			});
+
 			$.ajax({
 				url:myFavoritoContent.attr('data-external-url'),
 				method: 'POST',

@@ -6,26 +6,34 @@
 
 <link rel="stylesheet" type="text/css" href="widget.css">
 
-<div id="external-content" data-external-url="https://www.myfavorito.com/en?t=/sportsClubWidget/v2/index&cid=1530531138782" style=""></div>
+<div id="external-content" data-external-url="https://www.myfavorito.com/en?t=/sportsClubWidget/v2/index&cid=" data-community-id="1530531138782" style=""></div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.0/dist/muuri.min.js" defer></script>
 <!-- <script src="./dist/main.js"></script> -->
 <script src="./app/widget.js"></script>
+<script src="./app/muuri.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-	var myFavoritoContent = $('#external-content');
-	$.ajax({
-		url:myFavoritoContent.attr('data-external-url'),
-		method: 'POST',
-		crossDomain: true,
-		xhrFields: {
-      		withCredentials: true
-   		}
-	}).done(function(data,result,xhr){
-		myFavoritoContent.html(data);
-	});
-});
+	window.addEventListener('DOMContentLoaded', function() {
+        (function($) {
+            const myFavoritoContent = $('#external-content');
+			const myFavoritoCID = myFavoritoContent.attr('data-community-id');
+			postVar.cid = myFavoritoCID;
+
+			$.ajax({ 
+				url:myFavoritoContent.attr('data-external-url')+myFavoritoCID,
+				method: 'POST',
+				crossDomain: true,
+				xhrFields: {
+					withCredentials: true
+				}
+			}).done(function(data,result,xhr){
+				myFavoritoContent.html(data);
+			});
+        })(jQuery);
+    });
 </script>
 
 <script src="//localhost:35729/livereload.js"></script>
