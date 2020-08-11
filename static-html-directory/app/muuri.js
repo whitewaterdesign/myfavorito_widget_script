@@ -78,7 +78,14 @@ const webclient_grid_init = function(settings) {
             let c_page = myF_data_map[data_id];
             console.log(c_page);
             muurigrid_modal(c_page);
-            //settings.promo_log(event.currentTarget.dataset.id);
+            if(c_page.type ==  'promotion') {
+                setTimeout(function(){ 
+                    $.get({ 
+                        url:'https://www.myfavorito.com/?t=/webclient/controller/promos/log&promoid='+c_page.id
+                    });
+                },1000);
+            }
+             //settings.promo_log(event.currentTarget.dataset.id);
             
         }
         

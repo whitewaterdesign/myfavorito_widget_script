@@ -412,9 +412,7 @@ let myF_result_data = {};
 
 const postVar = {
     default_url:'https://www.myfavorito.com/json/v1/community/' + myf_community_id + '/sponsors/',
-    params: {
-        page: ''
-    },
+    params: {},
     action:'/sponsors/',
     default_type:'',
     default_category_id:'',
@@ -460,17 +458,17 @@ const postVar = {
     },
     url: function(page) {
         let page_string = '', params_string = '';
+        let params = this.params;
         if(page  > 1) {
             //this.type = type;
             page_string = page;
         }
-        
-        if(this.params.length > 0) {
-            params_string = "?" + Object.keys(this.params).forEach(function(key){
-                key + '=' + this.params[key]
+        if(Object.keys(params).length > 0) {
+            params_string = "?";
+            Object.keys(params).forEach(function(key){
+                params_string = params_string + '&' + key + '=' + params[key];
             });
-        } 
-
+        }
         return this.default_url + page_string + params_string;
     },
     init: function() {
