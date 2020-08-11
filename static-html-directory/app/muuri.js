@@ -1,3 +1,5 @@
+let myF_data_map;
+
 const webclient_grid_init = function(settings) {
     let muurigrid_query = [];
     var grid;
@@ -73,10 +75,10 @@ const webclient_grid_init = function(settings) {
             } else {
                 data_id = event.currentTarget.dataset.id;
             }
-            let c_page = muurigrid_query.find(o => o.id === data_id);
-            console.log(event);
+            let c_page = myF_data_map[data_id];
+            console.log(c_page);
             muurigrid_modal(c_page);
-            settings.promo_log(event.currentTarget.dataset.id);
+            //settings.promo_log(event.currentTarget.dataset.id);
             
         }
         
@@ -129,9 +131,13 @@ const webclient_grid_init = function(settings) {
                         el.appendChild(myf_item);
                         item_elements.push(el);
                     }
+
+                    myF_data_map[sm_post.id] = sm_post;
                 });
                 
                 grid.add(item_elements);
+
+                
             },"json");
         }
 

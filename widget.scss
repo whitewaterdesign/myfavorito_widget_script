@@ -1,3 +1,49 @@
+/*#external-content:empty::after {
+	position:absolute;
+	content: '';
+	font-size:16px;
+	position:absolute;
+	left:50%;
+	top:0;
+	transform: translateX(-50%);
+	display:block;
+	width:100%;
+	height:100%;
+	max-width: 1130px;
+	margin: 0 auto;
+	padding: 1em 2em;
+	text-transform:uppercase;
+	background-repeat: no-repeat;
+	background-image: 
+		linear-gradient(#ee781d 66%, transparent 0),
+		linear-gradient(#36464c 66%, #36464c 0),
+		linear-gradient(#e7e7e7 66%, transparent 0),
+		linear-gradient(#e7e7e7 76%, transparent 0),
+		linear-gradient(#e7e7e7 76%, transparent 0),
+		linear-gradient(white 100%, transparent 0);
+	background-size:
+		175px 63px, 
+		100% 2px,
+		100% 75px,
+		37% 45px,
+		100% 275px,
+		100% 100%;
+	background-position: 
+		593px 3px,
+		0% 57px,
+		0% 87px,
+		0% 193px,
+		0% 253px,
+		0 0;
+
+	@media (min-width:1200px) {
+		filter:blur(3px);
+		content: '\00a0\00a0\00a0 Home\00a0\00a0\00a0\00a0\00a0\00a0Transactions\00a0\00a0\00a0\00a0\00a0\00a0 Leaderboard\00a0\00a0\00a0\00a0\00a0\00a0 Activities\00a0\00a0\00a0\00a0\00a0\00a0 Store Map\00a0\00a0\00a0\00a0\00a0\00a0 Become a sponsor';
+	}
+}
+
+
+*/
 :root {
     --myf_green: #ced619;
     --myf_grey: #36464c;
@@ -3097,6 +3143,7 @@
     font-size:14px;
 	z-index:1;
 	position: relative;
+	min-height:400px;
 
     .row-m5 {
         margin-left:-5px;
@@ -4471,7 +4518,7 @@
 		font-weight:400;
 	}
 	
-	.muuri-content--full-size.mu_type__promotion_new .mu_item .mu_item__img,
+	.muuri-content--full-size.mu_type__promotion .mu_item .mu_item__img,
 	.muuri-content--full-size.mu_type__loyalty .mu_item .mu_item__img {
 		margin-top:-15px;
 		margin-left:-15px;
@@ -5200,7 +5247,7 @@
         margin-top: -63px;
     }
 
-    .muuri-content--full-size.mu_type__promotion_new .mu_item .mu_item__img, 
+    .muuri-content--full-size.mu_type__promotion .mu_item .mu_item__img, 
     .muuri-content--full-size.mu_type__loyalty .mu_item .mu_item__img {
         margin-top: -15px;
         margin-left: -15px;

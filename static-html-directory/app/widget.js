@@ -36,6 +36,7 @@ const myf_ajax_post = function(url) {
 const muurigrid_modal = function(data) {
     
     let myelement = postVar.templates[data.type];
+    console.log(myelement);
     
     let my_contact = '';
     
