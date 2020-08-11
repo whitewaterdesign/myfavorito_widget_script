@@ -74,7 +74,7 @@ const webclient_grid_init = function(settings) {
                 data_id = event.currentTarget.dataset.id;
             }
             let c_page = muurigrid_query.find(o => o.id === data_id);
-            
+            console.log(event);
             muurigrid_modal(c_page);
             settings.promo_log(event.currentTarget.dataset.id);
             
