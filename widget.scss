@@ -3921,12 +3921,35 @@
         width: 60px;
     }
 
+	.myf_apple_store {
+		float:right;
+		margin-left:1.5em;
+		line-height:40px;
+		display:block;
+		height:40px;
+	}
+
     .myf_powered {
+		@extend .myf_apple_store;
         width: 200px;
-        height: 20px;
-        float: right;
-        margin: 0.5em;
-    }
+		height: 40px;
+
+		svg {
+			line-height:40px;
+			vertical-align: middle;
+			display:inline-block;
+			height:20px;
+		}
+	}
+	
+	.myf_play_store {
+		@extend .myf_apple_store;
+
+		svg {
+			height:40px;
+			width:auto;
+		}
+	}
 
     ul#myf_store_switch.myf_switch_menu li.my_sponsor {
         margin-left:0.5em;
@@ -4073,6 +4096,10 @@
    .myf-header-input__submit {
 		position: relative;
 		float: right;
+
+		button {
+			height:45px;
+		}
 	}
 	#flex-container {
 		padding:20px;
@@ -5126,6 +5153,8 @@
 			line-height:302px;
 		}
 	}
+
+	
 }
 // Section 2 end: #external-content
 // Section 3: #myf_modal

@@ -32,7 +32,7 @@ const webclient_grid_init = function(settings) {
         typeof performance.getEntriesByType("navigation")[0] != 'undefined' &&
         performance.getEntriesByType("navigation")[0].type == 'reload'
     ) { 
-        const scrolltop = document.getElementById('js_scroller').offsetTop;
+        const scrolltop = document.getElementById('js_scroller').offsetTop + 400;
         if(window.scrollY > scrolltop){ 
             window.scrollTo(0, scrolltop)	
         }
