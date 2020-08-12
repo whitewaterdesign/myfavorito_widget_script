@@ -37,9 +37,6 @@ const muurigrid_modal = function(data) {
     
     let myelement = postVar.templates[data.type];
 
-    console.log(myelement);
-    console.log(data.type);
-    console.log(postVar.templates);
     let my_contact = '';
     
     if(
@@ -465,6 +462,7 @@ const postVar = {
             //this.type = type;
             page_string = page;
         }
+
         if(Object.keys(params).length > 0) {
             params_string = "?";
             Object.keys(params).forEach(function(key){

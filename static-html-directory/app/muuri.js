@@ -3,12 +3,27 @@ let myF_data_map;
 const webclient_grid_init = function(settings) {
     let muurigrid_query = [];
     var grid;
-    let object_count = myF_result_data.count;
+    let object_count;
+    let call_url = postVar.url();
+
+    if(!call_url.includes('?')) {
+        call_url += '?';
+    } 
+
+    $.ajax({
+        url:call_url + '&count=1',
+        async: false,
+        success: function(data) {
+            //console.log('count',data);
+            object_count = data.count;
+        }
+    });
+
     let search = {
         page: 1,
         limit: 20
     }
-
+    
     const templates = postVar.templates;
 
     if(
@@ -76,7 +91,7 @@ const webclient_grid_init = function(settings) {
                 data_id = event.currentTarget.dataset.id;
             }
             let c_page = myF_data_map[data_id];
-            console.log(c_page);
+            //console.log(c_page);
             muurigrid_modal(c_page);
             if(c_page.type ==  'promotion') {
                 setTimeout(function(){ 
@@ -96,7 +111,10 @@ const webclient_grid_init = function(settings) {
             $.get( postVar.url(search.page), function(data){ 
 
                 // process each of the items
-               
+                if(typeof data.count != 'undefined') {
+                    object_count = data.count;
+                }
+                
                 var item_elements = [];
                 let elements = document.querySelectorAll('a[data-id="-1"]');
                 
@@ -170,7 +188,7 @@ const webclient_grid_init = function(settings) {
                 getMuurigridMix(search,object_count,search.limit);
                 
                 search.page = 2;
-                
+
                 // number of results not visible on page
                 var elements_left = object_count - search.limit;
                 
