@@ -2,3 +2,7 @@ Gruntfile.js
 node_modules/*
 package-lock.json
 package.json
+Dockerfile
+buildspec.yml
+myfavorito.code-workspace
+widget.scss
