@@ -3,7 +3,7 @@ let myF_data_map;
 const webclient_grid_init = function(settings) {
     let muurigrid_query = [];
     var grid;
-    const object_count = myF_result_data.count;
+    let object_count = myF_result_data.count;
     let search = {
         page: 1,
         limit: 20
@@ -90,14 +90,13 @@ const webclient_grid_init = function(settings) {
         }
         
         const getMuurigridMix  = function(search) { 
-
             const min=0; 
             const max=2; 
 
             $.get( postVar.url(search.page), function(data){ 
 
                 // process each of the items
-                
+               
                 var item_elements = [];
                 let elements = document.querySelectorAll('a[data-id="-1"]');
                 
@@ -141,10 +140,8 @@ const webclient_grid_init = function(settings) {
 
                     myF_data_map[sm_post.id] = sm_post;
                 });
-                
-                grid.add(item_elements);
-
-                
+                grid.add(item_elements);      
+                          
             },"json");
         }
 
